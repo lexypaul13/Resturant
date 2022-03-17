@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct CustomerDetail: Codable {
    
    let fullName: String

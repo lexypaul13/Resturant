@@ -10,7 +10,6 @@ import UIKit
 class ReservationVC: UIViewController {
     
     var resturant = [CustomerDetail]()
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,7 +22,13 @@ class ReservationVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
+    @IBAction func createButton(_ sender: Any) {
+        performSegue(withIdentifier: "selectTime", sender: sender)
+        
+    }
+    
+    
 }
 
 extension ReservationVC: UITableViewDelegate, UITableViewDataSource{
@@ -31,10 +36,12 @@ extension ReservationVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return  resturant.count
-    }
+    } 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+       
+        return cell
     }
     
     
