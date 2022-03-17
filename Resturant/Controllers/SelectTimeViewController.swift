@@ -6,24 +6,44 @@
 //
 
 import UIKit
-
 class SelectTimeViewController: UIViewController {
     
-    @IBOutlet weak var timePicker: UIDatePicker!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        createDatePicker()
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-    func createDatePicker(){
-        timePicker.datePickerMode = .time
-        timePicker.backgroundColor = .black
-        timePicker.minuteInterval = 15
-        timePicker.preferredDatePickerStyle = .wheels
-        timePicker.locale = .current
+
+}
+extension SelectTimeViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customerDetails.count
     }
-
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = customerDetails[indexPath.row]
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "timeCell", for: indexPath) as! SelectTimeTableViewCell
+        var customerDetails = customerDetails[indexPath.row]
+        cell.selectTimeLabel.text = customerDetails.bookingTime
+        if customerDetails.reservation {
+        cell.availableLabel.text = "not availbe"
+        } else {
+            cell.availableLabel.text = ""
+        }
+        return cell
+    }
+    
+    
+    
+    
+    
 }

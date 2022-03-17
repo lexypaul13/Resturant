@@ -10,8 +10,9 @@ import Foundation
 struct CustomerDetail: Codable {
    
    let fullName: String
-   let phoneNumber: Int
+   let phoneNumber: String
    let visitorsNotes:String?
    let partySize: Int
-   let bookingTime: Date
+   let bookingTime: String
+   let reservation: Bool
 }
