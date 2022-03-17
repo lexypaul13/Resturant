@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cay-g6-CbF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ReservationVC-->
+        <!--Reservation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ReservationVC" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReservationViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6V3-Id-byK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="88" id="lTo-jA-vfZ" customClass="ReservationTableViewCell" customModule="Resturant" customModuleProvider="target">
@@ -82,7 +82,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-tP-zer">
-                                <rect key="frame" x="318" y="44" width="87" height="36"/>
+                                <rect key="frame" x="318" y="88" width="87" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="feU-oD-7Xn"/>
@@ -92,7 +92,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Pick Time"/>
                                 <connections>
                                     <action selector="createButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K5b-zJ-ftm"/>
-                                    <segue destination="tbM-tG-1G2" kind="show" identifier="selectTime" id="jwV-Ip-ddc"/>
+                                    <segue destination="tbM-tG-1G2" kind="show" identifier="selectTime" id="OOd-GA-uXg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,76 +108,133 @@
                             <constraint firstItem="6V3-Id-byK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xyG-bp-yYN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NYo-eQ-EYU"/>
                     <connections>
                         <outlet property="tableView" destination="6V3-Id-byK" id="WF4-94-exZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1831.8840579710147" y="87.723214285714278"/>
         </scene>
         <!--Select Time View Controller-->
         <scene sceneID="nzM-eg-5sa">
             <objects>
                 <viewController storyboardIdentifier="selectTimeVC" id="tbM-tG-1G2" customClass="SelectTimeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ZX-5Y-5jy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FF-vY-M3m">
-                                <rect key="frame" x="0.0" y="103" width="414" height="449"/>
+                                <rect key="frame" x="0.0" y="356" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="669176078.70615304">
                                     <!--2022-03-17 02:14:38 +0000-->
                                 </date>
+                                <connections>
+                                    <segue destination="fmX-Cc-ZRX" kind="show" id="1t6-NT-Th7"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9CH-Tb-NYD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9CH-Tb-NYD" firstAttribute="bottom" secondItem="9FF-vY-M3m" secondAttribute="bottom" constant="290" id="6GU-PQ-7GF"/>
-                            <constraint firstItem="9FF-vY-M3m" firstAttribute="top" secondItem="9CH-Tb-NYD" secondAttribute="top" constant="59" id="EUe-ZB-APy"/>
                             <constraint firstItem="9FF-vY-M3m" firstAttribute="leading" secondItem="9CH-Tb-NYD" secondAttribute="leading" id="MDg-IZ-52I"/>
                             <constraint firstItem="9FF-vY-M3m" firstAttribute="trailing" secondItem="9CH-Tb-NYD" secondAttribute="trailing" id="PDi-gZ-06p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bsH-JC-Bpp"/>
+                    <navigationItem key="navigationItem" id="6H0-Lm-T5Q"/>
                     <connections>
                         <outlet property="timePicker" destination="9FF-vY-M3m" id="7am-hX-QHU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zci-Rx-h4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2671.0144927536235" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Party Size View Controller-->
         <scene sceneID="6l7-H4-20W">
             <objects>
-                <viewController id="fmX-Cc-ZRX" sceneMemberID="viewController">
+                <viewController id="fmX-Cc-ZRX" customClass="PartySizeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DH-D7-aPt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWg-ZX-lb8">
+                                <rect key="frame" x="0.0" y="344" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4xm-j0-sML"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LWg-ZX-lb8" firstAttribute="trailing" secondItem="4xm-j0-sML" secondAttribute="trailing" id="6vf-PW-0oK"/>
+                            <constraint firstItem="4xm-j0-sML" firstAttribute="bottom" secondItem="LWg-ZX-lb8" secondAttribute="bottom" constant="302" id="ibe-16-Fia"/>
+                            <constraint firstItem="LWg-ZX-lb8" firstAttribute="leading" secondItem="4xm-j0-sML" secondAttribute="leading" id="t5U-3e-shZ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="k31-YA-czT"/>
+                    <connections>
+                        <segue destination="O0I-aX-oDG" kind="show" id="Ecd-ea-1WW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfW-FC-XQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="88"/>
+            <point key="canvasLocation" x="3567" y="88"/>
         </scene>
-        <!--View Controller-->
+        <!--Party Size View Controller-->
         <scene sceneID="g9S-oJ-ZBP">
             <objects>
-                <viewController id="O0I-aX-oDG" sceneMemberID="viewController">
+                <viewController id="O0I-aX-oDG" customClass="PartySizeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w5j-Kz-3f6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x9T-fz-b2V">
+                                <rect key="frame" x="20" y="338" width="374" height="150"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MxE-1Z-G1n">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-Gg-qJS">
+                                <rect key="frame" x="12" y="148" width="390" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvQ-V4-SCZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-Bd-vP5">
+                                        <rect key="frame" x="0.0" y="76" width="390" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="K8f-go-OBn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xeS-Gg-qJS" firstAttribute="leading" secondItem="K8f-go-OBn" secondAttribute="leading" constant="12" id="YZe-l2-OMJ"/>
+                            <constraint firstItem="x9T-fz-b2V" firstAttribute="leading" secondItem="K8f-go-OBn" secondAttribute="leading" constant="20" id="ekr-d2-t03"/>
+                            <constraint firstItem="K8f-go-OBn" firstAttribute="trailing" secondItem="x9T-fz-b2V" secondAttribute="trailing" constant="20" id="fnf-3m-yLK"/>
+                            <constraint firstItem="K8f-go-OBn" firstAttribute="trailing" secondItem="xeS-Gg-qJS" secondAttribute="trailing" constant="12" id="g96-7R-782"/>
+                            <constraint firstItem="K8f-go-OBn" firstAttribute="bottom" secondItem="x9T-fz-b2V" secondAttribute="bottom" constant="374" id="iPB-HO-yfO"/>
+                            <constraint firstItem="xeS-Gg-qJS" firstAttribute="top" secondItem="K8f-go-OBn" secondAttribute="top" constant="60" id="lg5-3t-B3H"/>
+                            <constraint firstItem="x9T-fz-b2V" firstAttribute="top" secondItem="xeS-Gg-qJS" secondAttribute="bottom" constant="80" id="p3t-CS-uSL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ei3-RK-Z17"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q76-E7-C6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="88"/>
+            <point key="canvasLocation" x="4247.826086956522" y="87.723214285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="it8-5K-0bh">
@@ -298,7 +355,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pu0-Hz-lGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="786.83035714285711"/>
+            <point key="canvasLocation" x="922" y="806"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1GO-Yc-AaV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cay-g6-CbF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ign-h5-wh0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FKv-UH-1tA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m41-uC-2kf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>

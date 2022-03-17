@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReservationVC: UIViewController {
+class ReservationViewController: UIViewController {
     
     var resturant = [CustomerDetail]()
     @IBOutlet weak var tableView: UITableView!
@@ -25,13 +25,12 @@ class ReservationVC: UIViewController {
     
     @IBAction func createButton(_ sender: Any) {
         performSegue(withIdentifier: "selectTime", sender: sender)
-        
     }
     
     
 }
 
-extension ReservationVC: UITableViewDelegate, UITableViewDataSource{
+extension ReservationViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

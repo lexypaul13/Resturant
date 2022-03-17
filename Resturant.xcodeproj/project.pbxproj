@@ -10,9 +10,11 @@
 		57B20FBE27E2B24D004115A2 /* CustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */; };
 		57B20FC027E2B589004115A2 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B20FBF27E2B589004115A2 /* ReservationTableViewCell.swift */; };
 		57B20FC527E2C5B2004115A2 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B20FC427E2C5B2004115A2 /* SelectTimeViewController.swift */; };
+		57D5F3AB27E2E8EA0041C3C2 /* PartySizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5F3AA27E2E8EA0041C3C2 /* PartySizeViewController.swift */; };
+		57D5F3AD27E2EB1C0041C3C2 /* GuestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5F3AC27E2EB1C0041C3C2 /* GuestDetailsViewController.swift */; };
 		57E41E1C27E2816800570DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E41E1B27E2816800570DD1 /* AppDelegate.swift */; };
 		57E41E1E27E2816800570DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E41E1D27E2816800570DD1 /* SceneDelegate.swift */; };
-		57E41E2027E2816800570DD1 /* ReservationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E41E1F27E2816800570DD1 /* ReservationVC.swift */; };
+		57E41E2027E2816800570DD1 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E41E1F27E2816800570DD1 /* ReservationViewController.swift */; };
 		57E41E2327E2816800570DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E41E2127E2816800570DD1 /* Main.storyboard */; };
 		57E41E2527E2816A00570DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E41E2427E2816A00570DD1 /* Assets.xcassets */; };
 		57E41E2827E2816A00570DD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E41E2627E2816A00570DD1 /* LaunchScreen.storyboard */; };
@@ -42,10 +44,12 @@
 		57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetail.swift; sourceTree = "<group>"; };
 		57B20FBF27E2B589004115A2 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		57B20FC427E2C5B2004115A2 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		57D5F3AA27E2E8EA0041C3C2 /* PartySizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySizeViewController.swift; sourceTree = "<group>"; };
+		57D5F3AC27E2EB1C0041C3C2 /* GuestDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailsViewController.swift; sourceTree = "<group>"; };
 		57E41E1827E2816800570DD1 /* Resturant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resturant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E41E1B27E2816800570DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E41E1D27E2816800570DD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57E41E1F27E2816800570DD1 /* ReservationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationVC.swift; sourceTree = "<group>"; };
+		57E41E1F27E2816800570DD1 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		57E41E2227E2816800570DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57E41E2427E2816A00570DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E41E2727E2816A00570DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,8 +89,10 @@
 		57B20FC127E2C537004115A2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57E41E1F27E2816800570DD1 /* ReservationVC.swift */,
+				57E41E1F27E2816800570DD1 /* ReservationViewController.swift */,
 				57B20FC427E2C5B2004115A2 /* SelectTimeViewController.swift */,
+				57D5F3AC27E2EB1C0041C3C2 /* GuestDetailsViewController.swift */,
+				57D5F3AA27E2E8EA0041C3C2 /* PartySizeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,11 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E41E2027E2816800570DD1 /* ReservationVC.swift in Sources */,
+				57D5F3AD27E2EB1C0041C3C2 /* GuestDetailsViewController.swift in Sources */,
+				57E41E2027E2816800570DD1 /* ReservationViewController.swift in Sources */,
 				57B20FC527E2C5B2004115A2 /* SelectTimeViewController.swift in Sources */,
 				57E41E1C27E2816800570DD1 /* AppDelegate.swift in Sources */,
 				57E41E1E27E2816800570DD1 /* SceneDelegate.swift in Sources */,
 				57B20FC027E2B589004115A2 /* ReservationTableViewCell.swift in Sources */,
+				57D5F3AB27E2E8EA0041C3C2 /* PartySizeViewController.swift in Sources */,
 				57B20FBE27E2B24D004115A2 /* CustomerDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
