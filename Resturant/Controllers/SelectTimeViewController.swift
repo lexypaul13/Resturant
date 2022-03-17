@@ -26,7 +26,11 @@ extension SelectTimeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = customerDetails[indexPath.row]
+        let cell = customerDetails[indexPath.row].bookingTime
+        guard let viewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PartySizeViewController")
+        as? PartySizeViewController else { return }
+        viewController.selectTime = cell
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     

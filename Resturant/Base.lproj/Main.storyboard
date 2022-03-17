@@ -192,7 +192,7 @@
         <!--Party Size View Controller-->
         <scene sceneID="6l7-H4-20W">
             <objects>
-                <viewController id="fmX-Cc-ZRX" customClass="PartySizeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PartySizeViewController" id="fmX-Cc-ZRX" customClass="PartySizeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DH-D7-aPt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +403,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52m-E7-WCu">
                                 <rect key="frame" x="307" y="44" width="87" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Close"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jOZ-g4-2w9"/>

@@ -9,6 +9,7 @@ import UIKit
 
 class PartySizeViewController: UIViewController {
     var partySize = ["1","2","3","4","5"]
+    var selectTime: String?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
