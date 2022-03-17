@@ -119,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */,
+				57D5F3B027E38C3E0041C3C2 /* DataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,7 +157,6 @@
 				57E41E2427E2816A00570DD1 /* Assets.xcassets */,
 				57E41E2627E2816A00570DD1 /* LaunchScreen.storyboard */,
 				57E41E2927E2816A00570DD1 /* Info.plist */,
-				57D5F3B027E38C3E0041C3C2 /* DataSource.swift */,
 			);
 			path = Resturant;
 			sourceTree = "<group>";

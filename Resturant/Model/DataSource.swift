@@ -8,26 +8,29 @@
 import Foundation
 var customerDetails:[CustomerDetail] = [CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:00 Pm", reservation: false),
                                         
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:15 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:15 Pm", reservation: false),
     
-   CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:30 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:30 Pm", reservation: false),
 
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:45 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "3:45 Pm", reservation: false),
 
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:00 Pm", reservation: false),
+                                        
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:00 Pm", reservation: false),
     
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:15 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:15 Pm", reservation: false),
     
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:30 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:30 Pm", reservation: false),
     
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:45 Pm", reservation: false),
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:00 Pm", reservation: false),
+ CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "4:45 Pm", reservation: false),
   
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:15 Pm", reservation: false),
+                                        
+  CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:00 Pm", reservation: false),
   
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:30 Pm", reservation: false),
+  CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:15 Pm", reservation: false),
   
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:45 Pm", reservation: false),
+  CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:30 Pm", reservation: false),
+  
+  CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "5:45 Pm", reservation: false),
                                 
   CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "6:00 Pm", reservation: false),
   
@@ -63,5 +66,5 @@ var customerDetails:[CustomerDetail] = [CustomerDetail(fullName: "", phoneNumber
   
   CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "9:45 Pm", reservation: false),
   
-    CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "10:00 Pm", reservation: false)]
+  CustomerDetail(fullName: "", phoneNumber: "", visitorsNotes: "", partySize: 0, bookingTime: "10:00 Pm", reservation: false)]
 

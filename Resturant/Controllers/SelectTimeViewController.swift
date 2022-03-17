@@ -46,8 +46,4 @@ extension SelectTimeViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
-    
-    
-    
 }
