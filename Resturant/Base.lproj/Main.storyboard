@@ -12,7 +12,7 @@
         <!--Reservation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ReservationViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReservationViewController" id="BYZ-38-t0r" customClass="ReservationViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Pick Time"/>
                                 <connections>
                                     <action selector="createButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K5b-zJ-ftm"/>
-                                    <segue destination="tbM-tG-1G2" kind="show" identifier="selectTime" id="OOd-GA-uXg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,13 +119,13 @@
         <!--Select Time View Controller-->
         <scene sceneID="nzM-eg-5sa">
             <objects>
-                <viewController storyboardIdentifier="selectTimeVC" id="tbM-tG-1G2" customClass="SelectTimeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectTimeViewController" id="tbM-tG-1G2" customClass="SelectTimeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ZX-5Y-5jy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="scF-zf-ttK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" rowHeight="110" id="a39-wa-uvv" customClass="SelectTimeTableViewCell" customModule="Resturant" customModuleProvider="target">
@@ -250,12 +249,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfW-FC-XQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3492.753623188406" y="87.723214285714278"/>
+            <point key="canvasLocation" x="3423" y="88"/>
         </scene>
-        <!--Party Size View Controller-->
+        <!--Guest Details View Controller-->
         <scene sceneID="g9S-oJ-ZBP">
             <objects>
-                <viewController id="O0I-aX-oDG" customClass="PartySizeViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuestDetailsViewController" id="O0I-aX-oDG" customClass="GuestDetailsViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w5j-Kz-3f6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,8 +264,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MxE-1Z-G1n">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -280,6 +278,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="58"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="fullNameField:" destination="aos-tv-5PR" eventType="editingDidEnd" id="9Ev-2l-qml"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-Bd-vP5">
                                         <rect key="frame" x="0.0" y="100" width="390" height="34"/>
@@ -288,29 +289,47 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSI-7f-x4w">
+                                <rect key="frame" x="142" y="536" width="130" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="O0I-aX-oDG" eventType="touchUpInside" id="end-n7-weO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K8f-go-OBn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="K8f-go-OBn" firstAttribute="trailing" secondItem="pSI-7f-x4w" secondAttribute="trailing" constant="142" id="60o-pn-hwT"/>
+                            <constraint firstItem="K8f-go-OBn" firstAttribute="bottom" secondItem="pSI-7f-x4w" secondAttribute="bottom" constant="275" id="CSj-xe-qDc"/>
                             <constraint firstItem="xeS-Gg-qJS" firstAttribute="leading" secondItem="K8f-go-OBn" secondAttribute="leading" constant="12" id="YZe-l2-OMJ"/>
                             <constraint firstItem="x9T-fz-b2V" firstAttribute="leading" secondItem="K8f-go-OBn" secondAttribute="leading" constant="20" id="ekr-d2-t03"/>
                             <constraint firstItem="K8f-go-OBn" firstAttribute="trailing" secondItem="x9T-fz-b2V" secondAttribute="trailing" constant="20" id="fnf-3m-yLK"/>
                             <constraint firstItem="K8f-go-OBn" firstAttribute="trailing" secondItem="xeS-Gg-qJS" secondAttribute="trailing" constant="12" id="g96-7R-782"/>
                             <constraint firstItem="K8f-go-OBn" firstAttribute="bottom" secondItem="x9T-fz-b2V" secondAttribute="bottom" constant="374" id="iPB-HO-yfO"/>
+                            <constraint firstItem="pSI-7f-x4w" firstAttribute="top" secondItem="x9T-fz-b2V" secondAttribute="bottom" constant="68" id="jR3-v0-KnT"/>
                             <constraint firstItem="xeS-Gg-qJS" firstAttribute="top" secondItem="K8f-go-OBn" secondAttribute="top" constant="60" id="lg5-3t-B3H"/>
+                            <constraint firstItem="pSI-7f-x4w" firstAttribute="leading" secondItem="K8f-go-OBn" secondAttribute="leading" constant="142" id="luK-V8-Soi"/>
                             <constraint firstItem="x9T-fz-b2V" firstAttribute="top" secondItem="xeS-Gg-qJS" secondAttribute="bottom" constant="80" id="p3t-CS-uSL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ei3-RK-Z17"/>
+                    <connections>
+                        <outlet property="fullNameField" destination="kvQ-V4-SCZ" id="sAb-an-Ly1"/>
+                        <outlet property="phoneNumberField" destination="GYt-Bd-vP5" id="8Az-6I-09h"/>
+                        <outlet property="vistorsDetailField" destination="MxE-1Z-G1n" id="Z4L-XE-kDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q76-E7-C6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aos-tv-5PR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4247.826086956522" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="it8-5K-0bh">
             <objects>
-                <viewController id="v0r-sg-jlM" sceneMemberID="viewController">
+                <viewController id="v0r-sg-jlM" customClass="DetailViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdj-pz-NpM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,6 +423,9 @@
                                 <rect key="frame" x="307" y="44" width="87" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="v0r-sg-jlM" eventType="touchUpInside" id="zuZ-Q3-Ygu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jOZ-g4-2w9"/>
@@ -423,10 +445,17 @@
                             <constraint firstItem="LcW-v7-Oeg" firstAttribute="leading" secondItem="jOZ-g4-2w9" secondAttribute="leading" constant="20" id="oFp-KB-Go9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="XuB-1j-KX2" id="6sB-O8-y9r"/>
+                        <outlet property="partyNumber" destination="qua-tv-oHC" id="wVB-Nd-MQE"/>
+                        <outlet property="phoneNumberLabel" destination="sL0-z8-ivR" id="iaZ-ry-SSp"/>
+                        <outlet property="timeLabel" destination="QLc-po-E3A" id="SEo-6K-xif"/>
+                        <outlet property="vistorsDetail" destination="CFd-pi-PLS" id="h9L-Dk-VlK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pu0-Hz-lGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="806"/>
+            <point key="canvasLocation" x="946" y="769"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1GO-Yc-AaV">
@@ -456,6 +485,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
