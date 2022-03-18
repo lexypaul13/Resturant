@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5764A20927E3E9380001D069 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5764A20827E3E9380001D069 /* DetailViewController.swift */; };
+		5764A20B27E4467C0001D069 /* List of Improvements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5764A20A27E4467C0001D069 /* List of Improvements.rtf */; };
 		5777208D27E398D200BDFE24 /* PartySizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777208C27E398D200BDFE24 /* PartySizeTableViewCell.swift */; };
 		57B20FBE27E2B24D004115A2 /* CustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */; };
 		57B20FC027E2B589004115A2 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B20FBF27E2B589004115A2 /* ReservationTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		5764A20827E3E9380001D069 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5764A20A27E4467C0001D069 /* List of Improvements.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "List of Improvements.rtf"; sourceTree = "<group>"; };
 		5777208C27E398D200BDFE24 /* PartySizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySizeTableViewCell.swift; sourceTree = "<group>"; };
 		57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetail.swift; sourceTree = "<group>"; };
 		57B20FBF27E2B589004115A2 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				57B20FBD27E2B24D004115A2 /* CustomerDetail.swift */,
 				57D5F3B027E38C3E0041C3C2 /* DataSource.swift */,
+				5764A20A27E4467C0001D069 /* List of Improvements.rtf */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5764A20B27E4467C0001D069 /* List of Improvements.rtf in Resources */,
 				57E41E2827E2816A00570DD1 /* LaunchScreen.storyboard in Resources */,
 				57E41E2527E2816A00570DD1 /* Assets.xcassets in Resources */,
 				57E41E2327E2816800570DD1 /* Main.storyboard in Resources */,

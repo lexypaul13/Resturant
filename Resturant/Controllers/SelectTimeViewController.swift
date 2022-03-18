@@ -46,7 +46,6 @@ extension SelectTimeViewController: UITableViewDelegate, UITableViewDataSource{
             if minutes > 60 {
                 cell.availableLabel.text = ""
                 customerDetails.reservation = false
-                
             }
         }
         if customerDetails.reservation {

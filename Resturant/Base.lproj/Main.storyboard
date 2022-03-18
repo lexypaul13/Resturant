@@ -329,7 +329,7 @@
         <!--Detail View Controller-->
         <scene sceneID="it8-5K-0bh">
             <objects>
-                <viewController id="v0r-sg-jlM" customClass="DetailViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="v0r-sg-jlM" customClass="DetailViewController" customModule="Resturant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdj-pz-NpM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
